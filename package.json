@@ -38,5 +38,10 @@
     "linters": {
       "bem": false
     }
+  },
+  "targets": {
+    "default": {
+      "publicUrl": "/js-2048-game/"
+    }
   }
 }
