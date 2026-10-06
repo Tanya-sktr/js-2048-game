@@ -21,11 +21,26 @@ function render() {
       const cell = cells[cellIndex];
       const value = state[row][col];
 
+      const previousValue = Number(cell.textContent) || 0;
+
       cell.textContent = value === 0 ? '' : value;
       cell.className = 'field-cell';
 
       if (value !== 0) {
         cell.classList.add(`field-cell--${value}`);
+      }
+
+      if (value !== 0 && value !== previousValue) {
+        cell.animate(
+          [
+            { transform: 'scale(0.85)' },
+            { transform: 'scale(1)' },
+          ],
+          {
+            duration: 180,
+            easing: 'ease-out',
+          },
+        );
       }
     }
   }
@@ -73,6 +88,19 @@ button.addEventListener('click', () => {
 });
 
 document.addEventListener('keydown', (e) => {
+  const arrowKeys = [
+    'ArrowLeft',
+    'ArrowRight',
+    'ArrowUp',
+    'ArrowDown',
+  ];
+
+  if (!arrowKeys.includes(e.key)) {
+    return;
+  }
+
+  e.preventDefault();
+
   switch (e.key) {
     case 'ArrowLeft':
       game.moveLeft();
@@ -90,5 +118,8 @@ document.addEventListener('keydown', (e) => {
       game.moveDown();
       break;
   }
+
   render();
 });
+
+render();
