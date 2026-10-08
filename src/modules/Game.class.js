@@ -303,9 +303,7 @@ class Game {
 
     if (this.hasWon()) {
       this.status = 'win';
-    }
-
-    if (this.hasLost()) {
+    } else if (this.hasLost()) {
       this.status = 'lose';
     }
   }
