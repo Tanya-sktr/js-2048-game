@@ -1,67 +1,125 @@
-# 2048 Game
+# JS2048
 
-## Overview
+## Introduction
 
-This project is a browser-based implementation of the classic 2048 game.
+Welcome to the **JS2048** project, a JavaScript implementation of the classic 2048 puzzle game.
 
-The goal of the game is to move and merge tiles with the same value until
-you create a tile with the number 2048.
+The game is played on a 4×4 grid where players move numbered tiles using the arrow keys. Tiles with the same value merge when they collide, and the goal is to reach the 2048 tile.
 
-The project was built with JavaScript, HTML, and SCSS and includes game
-logic, score tracking, win and lose states, keyboard controls, and restart
-functionality.
+The project was created to practice JavaScript game logic, state management, DOM rendering, responsive layout, and user interaction.
 
-## Live Preview
+### Key Features
 
-[Play the game](https://tanya-sktr.github.io/js-2048-game/)
+- **Tile Movement:** Move tiles using the keyboard arrow keys.
+- **Tile Merging:** Tiles with the same value merge into one tile with double the value.
+- **Random Tile Generation:** New tiles appear after valid moves.
+- **Score Tracking:** The score updates when tiles are merged.
+- **Win Condition:** The game is won when the 2048 tile is created.
+- **Lose Condition:** The game ends when there are no empty cells and no possible merges.
+- **Restart Functionality:** The game can be restarted at any time.
+- **Responsive Design:** The layout adapts to different screen sizes.
+- **Smooth UI Transitions:** Includes transitions and visual feedback for interactions.
 
-## Features
+## Challenges
 
-- Classic 4×4 game board
-- Keyboard controls using arrow keys
-- Random generation of new tiles
-- Tile merging logic
-- Score tracking
-- Win state when the 2048 tile is reached
-- Lose state when no valid moves remain
-- Start and restart functionality
-- Responsive layout
-- Smooth UI transitions
+Developing JS2048 involved several challenges related to game logic and state management.
 
-## How to Play
+### Key Challenges
 
-- Click the **Start** button to begin the game.
-- Use the arrow keys:
-  - ↑ Move tiles up
-  - ↓ Move tiles down
-  - ← Move tiles left
-  - → Move tiles right
-- Tiles with the same value merge when they collide.
-- Each merge increases your score.
-- Reach the **2048** tile to win.
-- The game ends when there are no empty cells and no possible merges.
-- Click **Restart** to start a new game.
+1. **Tile Movement and Merging:** Implementing correct movement in all four directions and ensuring that tiles merge only once per move.
+2. **Game State Management:** Keeping the board state, score, and game status synchronized.
+3. **Win and Lose Logic:** Correctly detecting when the player wins or when no valid moves remain.
+4. **Random Tile Generation:** Adding new tiles only after valid moves and placing them in empty cells.
+5. **DOM Rendering:** Updating the game board and score based on the current game state.
 
-## Controls
+## Technical Requirements
+
+To run this project, you will need:
+
+- **Modern web browser:** Latest version of Chrome, Firefox, Safari, or Edge.
+- **Node.js:** Required to run the development environment.
+- **NPM:** Used to install dependencies and run project scripts.
+
+## Installation and Setup
+
+To install the project and run it locally, follow these steps:
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/Tanya-sktr/js-2048-game.git
+   ```
+
+2. **Navigate to the project directory:**
+
+   ```bash
+   cd js-2048-game
+   ```
+
+3. **Install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+4. **Start the local development server:**
+
+   ```bash
+   npm start
+   ```
+
+## Usage
+
+After starting the project, it will be available at:
+
+`http://localhost:1234`
+
+Click the **Start** button to begin the game.
+
+Use the keyboard arrow keys to move the tiles:
 
 - `ArrowUp` — move tiles up
 - `ArrowDown` — move tiles down
 - `ArrowLeft` — move tiles left
 - `ArrowRight` — move tiles right
 
+Merge tiles with the same value and try to reach **2048**.
+
+## Example
+
+You can play the deployed version here:
+
+[DEMO LINK](https://tanya-sktr.github.io/js-2048-game/)
+
 ## Technologies Used
 
-- HTML5
-- SCSS
-- JavaScript
-- Parcel
-- Git
-- GitHub Pages
+This project was built using the following technologies:
 
-## Getting Started
+- **HTML5:** For the game structure and layout.
+- **SCSS:** For styling, responsive design, and reusable styles.
+- **JavaScript (ES6):** For game logic, state management, and interactivity.
+- **Parcel:** For local development and production builds.
+- **Node.js:** For running the development environment.
+- **NPM:** For dependency management and scripts.
+- **Git:** For version control.
+- **GitHub:** For hosting the repository.
+- **GitHub Pages:** For deploying the live demo.
 
-```bash
-git clone https://github.com/Tanya-sktr/js-2048-game.git
-cd js-2048-game
-npm install
-npm start
+## Design Specifications
+
+- **Desktop:** 1280px
+- **Tablet:** 640px
+- **Mobile:** 320px and above
+
+## Contribution Guidelines
+
+If you wish to contribute to this project, please follow these guidelines:
+
+1. **Fork the repository:** Create your own copy of the project on GitHub.
+2. **Clone your fork:** Download your copy to your local machine.
+3. **Create a branch:** Develop your feature or fix on a separate branch.
+4. **Submit a pull request:** Propose your changes to be merged into the main project.
+
+## License
+
+This project is licensed under the GPL-3.0 License - see the [LICENSE](https://github.com/Tanya-sktr/js-2048-game/blob/master/LICENSE) file for details.
