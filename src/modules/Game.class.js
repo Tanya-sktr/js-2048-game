@@ -209,7 +209,6 @@ class Game {
     this.status = 'idle';
   }
 
-  // Add your own methods here
   copyState(state) {
     return state.map((row) => [...row]);
   }
@@ -272,15 +271,15 @@ class Game {
         const current = this.state[row][col];
 
         if (
-          row < this.state.length - 1 &&
-          current === this.state[row + 1][col]
+          row < this.state.length - 1
+          && current === this.state[row + 1][col]
         ) {
           return true;
         }
 
         if (
-          col < this.state[row].length - 1 &&
-          current === this.state[row][col + 1]
+          col < this.state[row].length - 1
+          && current === this.state[row][col + 1]
         ) {
           return true;
         }
